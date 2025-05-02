@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART PARK - Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3498db',
+                        'primary-dark': '#2980b9',
+                        secondary: '#2ecc71',
+                        accent: '#f39c12',
+                        text: '#333',
+                        'text-light': '#666',
+                        background: '#f9f9f9',
+                        white: '#fff',
+                        border: '#ddd',
+                        error: '#e74c3c',
+                        success: '#2ecc71',
+                        shadow: 'rgba(0, 0, 0, 0.1)',
+                    },
+                    fontFamily: {
+                        'roboto': ['Roboto', 'sans-serif'],
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                    },
+                    spacing: {
+                        '15': '3.75rem',
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-roboto leading-6 text-text bg-background">
+    <header class="bg-white shadow-md sticky top-0 z-1000 professional-header border-b-3 border-primary">
+        <div class="container mx-auto px-5 py-4 flex items-center justify-between max-w-6xl">
+            <div class="logo flex items-center">
+                <svg class="parking-icon fill-primary" viewBox="0 0 24 24" width="30" height="30">
+                    <use href="assets/parking-icon.svg#parking"></use>
+                </svg>
+                <h1 class="text-xl font-montserrat mb-0 ml-2 text-primary">SMART PARK</h1>
+            </div>
+            <nav class="flex items-center">
+                <ul class="nav-links flex items-center">
+                    <li class="ml-6"><a href="index.html" class="text-text font-medium hover:text-primary">Home</a></li>
+                    <li class="ml-6"><a href="about.html" class="text-text font-medium hover:text-primary">About</a></li>
+                    <li class="ml-6"><a href="contact.html" class="text-text font-medium hover:text-primary text-primary active">Contact Us</a></li>
+                    <li class="ml-6"><a href="login.html" class="btn-outline inline-block py-2 px-5 rounded-md font-medium text-primary border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 ease-in-out">Login</a></li>
+                    <li class="ml-6"><a href="register.html" class="btn-primary inline-block py-2 px-5 rounded-md font-medium text-white bg-primary hover:bg-primary-dark transition-all duration-300 ease-in-out">Register</a></li>
+                </ul>
+                <div class="hamburger hidden cursor-pointer text-xl text-text">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header py-12 bg-gradient-to-r from-primary to-primary-dark text-white text-center">
+        <div class="container mx-auto px-5 max-w-3xl">
+            <h2 class="font-montserrat mb-4 text-3xl">Contact Us</h2>
+            <p class="text-lg">We'd love to hear from you. Reach out to our team with any questions or feedback.</p>
+        </div>
+    </section>
+
+    <section class="contact-info py-16 bg-white">
+        <div class="container mx-auto px-5 max-w-6xl">
+            <div class="contact-cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="contact-card bg-background rounded-lg p-8 text-center shadow-md">
+                    <i class="fas fa-map-marker-alt text-primary text-3xl mb-4"></i>
+                    <h3 class="font-montserrat text-lg mb-2">Our Location</h3>
+                    <p class="text-sm text-text-light">SMART PARK Headquarters<br>Gujrat, Pakistan</p>
+                </div>
+                <div class="contact-card bg-background rounded-lg p-8 text-center shadow-md">
+                    <i class="fas fa-phone text-primary text-3xl mb-4"></i>
+                    <h3 class="font-montserrat text-lg mb-2">Phone</h3>
+                    <p class="text-sm text-text-light">+92 3707012246</p>
+                    <p class="text-sm text-text-light">Mon-Fri: 9am - 5pm</p>
+                </div>
+                <div class="contact-card bg-background rounded-lg p-8 text-center shadow-md">
+                    <i class="fas fa-envelope text-primary text-3xl mb-4"></i>
+                    <h3 class="font-montserrat text-lg mb-2">Email</h3>
+                    <p class="text-sm text-text-light">czain3152@gmail.com</p>
+                    <p class="text-sm text-text-light">support@smartpark.pk</p>
+                </div>
+                <div class="contact-card bg-background rounded-lg p-8 text-center shadow-md">
+                    <i class="fas fa-comments text-primary text-3xl mb-4"></i>
+                    <h3 class="font-montserrat text-lg mb-2">Social Media</h3>
+                    <div class="social-icons flex justify-center gap-3 mt-2">
+                        <a href="#" class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white hover:bg-primary-dark"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white hover:bg-primary-dark"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white hover:bg-primary-dark"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white hover:bg-primary-dark"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-form-section py-16 bg-background">
+        <div class="container mx-auto px-5 max-w-6xl">
+            <div class="contact-container grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="form-container bg-white rounded-lg shadow-md p-8">
+                    <h2 class="section-title font-montserrat mb-8 text-2xl relative pb-2 text-center lg:text-left after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-15 after:h-0.5 after:bg-primary">Send Us a Message</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="mb-4">
+                            <label for="name" class="block text-text-light text-sm font-bold mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Zain" required class="shadow appearance-none border rounded w-full py-2 px-3 text-text leading-tight focus:outline-none focus:shadow-outline">
+                            <span class="error-message text-error text-xs italic" id="nameError"></span>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-text-light text-sm font-bold mb-2">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="zain@example.com" required class="shadow appearance-none border rounded w-full py-2 px-3 text-text leading-tight focus:outline-none focus:shadow-outline">
+                            <span class="error-message text-error text-xs italic" id="emailError"></span>
+                        </div>
+                        <div class="mb-4">
+                            <label for="subject" class="block text-text-light text-sm font-bold mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="How can we help you?" required class="shadow appearance-none border rounded w-full py-2 px-3 text-text leading-tight focus:outline-none focus:shadow-outline">
+                            <span class="error-message text-error text-xs italic" id="subjectError"></span>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-text-light text-sm font-bold mb-2">Your Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required class="shadow appearance-none border rounded w-full py-2 px-3 text-text leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                            <span class="error-message text-error text-xs italic" id="messageError"></span>
+                        </div>
+                        <button type="submit" class="btn-primary inline-block py-3 px-6 rounded-md font-medium text-white bg-primary hover:bg-primary-dark focus:outline-none focus:shadow-outline transition-all duration-300 ease-in-out">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="map-container bg-white rounded-lg shadow-md p-8">
+                    <h2 class="section-title font-montserrat mb-8 text-2xl relative pb-2 text-center lg:text-left after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-15 after:h-0.5 after:bg-primary">Find Us</h2>
+                    <div class="map-placeholder bg-gray-200 rounded-md flex items-center justify-center h-48 mb-4 text-gray-500">
+                        <i class="fas fa-map fa-6xl"></i>
+                        <p class="ml-4 text-sm">Interactive map would be displayed here</p>
+                    </div>
+                    <div class="hours">
+                        <h3 class="font-montserrat text-lg mb-2">Business Hours</h3>
+                        <ul class="list-none pl-0 text-sm text-text-light">
+                            <li class="mb-1"><strong class="text-text">Monday - Friday:</strong> 9:00 AM - 5:00 PM</li>
+                            <li class="mb-1"><strong class="text-text">Saturday:</strong> 10:00 AM - 2:00 PM</li>
+                            <li><strong class="text-text">Sunday:</strong> Closed</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section py-16 bg-white">
+        <div class="container mx-auto px-5 max-w-6xl">
+            <h2 class="section-title font-montserrat mb-8 text-2xl relative pb-2 text-center after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-15 after:h-0.5 after:bg-primary">Frequently Asked Questions</h2>
+            <div class="faq-container space-y-4">
+                <div class="faq-item bg-background rounded-lg shadow-md p-6">
+                    <div class="faq-question flex justify-between items-center cursor-pointer">
+                        <h3 class="font-montserrat text-lg">How do I reserve a parking spot?</h3>
+                        <i class="fas fa-chevron-down text-primary"></i>
+                    </div>
+                    <div class="faq-answer mt-3 text-sm text-text-light hidden">
+                        <p>To reserve a parking spot, create an account, search for available spots in your desired location, select a spot, and complete the payment process.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-background rounded-lg shadow-md p-6">
+                    <div class="faq-question flex justify-between items-center cursor-pointer">
+                        <h3 class="font-montserrat text-lg">Can I cancel my reservation?</h3>
+                        <i class="fas fa-chevron-down text-primary"></i>
+                    </div>
+                    <div class="faq-answer mt-3 text-sm text-text-light hidden">
+                        <p>Yes, you can cancel your reservation up to 2 hours before your scheduled parking time for a full refund.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-background rounded-lg shadow-md p-6">
+                    <div class="faq-question flex justify-between items-center cursor-pointer">
+                        <h3 class="font-montserrat text-lg">What payment methods do you accept?</h3>
+                        <i class="fas fa-chevron-down text-primary"></i>
+                    </div>
+                    <div class="faq-answer mt-3 text-sm text-text-light hidden">
+                        <p>We accept all major credit cards, PayPal, and mobile payment solutions like Apple Pay and Google Pay.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-background rounded-lg shadow-md p-6">
+                    <div class="faq-question flex justify-between items-center cursor-pointer">
+                        <h3 class="font-montserrat text-lg">Is my payment information secure?</h3>
+                        <i class="fas fa-chevron-down text-primary"></i>
+                    </div>
+                    <div class="faq-answer mt-3 text-sm text-text-light hidden">
+                        <p>Yes, we use industry-standard encryption and security measures to protect your payment information.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-5 max-w-6xl">
+            <div class="footer-content grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div class="footer-logo">
+                    <div class="flex items-center">
+                        <svg class="parking-icon fill-primary" viewBox="0 0 24 24" width="24" height="24">
+                            <use href="assets/parking-icon.svg#parking"></use>
+                        </svg>
+                        <h3 class="font-montserrat mb-2 text-lg ml-2">SMART PARK</h3>
+                    </div>
+                    <p class="text-sm text-gray-400">Making parking easier for everyone.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 class="font-montserrat relative pb-2 mb-4 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-7.5 after:h-0.5 after:bg-primary">Quick Links</h4>
+                    <ul>
+                        <li class="mb-2"><a href="index.html" class="text-gray-300 hover:text-primary">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-gray-300 hover:text-primary">About</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-gray-300 hover:text-primary">Contact Us</a></li>
+                        <li class="mb-2"><a href="login.html" class="text-gray-300 hover:text-primary">Login</a></li>
+                        <li class="mb-2"><a href="register.html" class="text-gray-300 hover:text-primary">Register</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4 class="font-montserrat relative pb-2 mb-4 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART PARK - Register</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3498db',
+                        'primary-dark': '#2980b9',
+                        secondary: '#2ecc71',
+                        accent: '#f39c12',
+                        text: '#333',
+                        'text-light': '#666',
+                        background: '#f9f9f9',
+                        white: '#fff',
+                        border: '#ddd',
+                        error: '#e74c3c',
+                        success: '#2ecc71',
+                        'google-blue': '#4285F4',
+                        'facebook-blue': '#1877F2',
+                    },
+                    fontFamily: {
+                        'roboto': ['Roboto', 'sans-serif'],
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                    },
+                    spacing: {
+                        '15': '3.75rem',
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-roboto leading-6 text-text bg-background">
+    <header class="bg-white shadow-md sticky top-0 z-1000 professional-header border-b-3 border-primary">
+        <div class="container mx-auto px-5 py-4 flex items-center justify-between max-w-6xl">
+            <div class="logo flex items-center">
+                <svg class="parking-icon fill-primary" viewBox="0 0 24 24" width="30" height="30">
+                    <use href="assets/parking-icon.svg#parking"></use>
+                </svg>
+                <h1 class="text-xl font-montserrat mb-0 ml-2 text-primary">SMART PARK</h1>
+            </div>
+            <nav class="flex items-center">
+                <ul class="nav-links flex items-center">
+                    <li class="ml-6"><a href="index.html" class="text-text font-medium hover:text-primary">Home</a></li>
+                    <li class="ml-6"><a href="about.html" class="text-text font-medium hover:text-primary">About</a></li>
+                    <li class="ml-6"><a href="contact.html" class="text-text font-medium hover:text-primary">Contact Us</a></li>
+                    <li class="ml-6"><a href="login.html" class="btn-outline inline-block py-2 px-5 rounded-md font-medium text-primary border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 ease-in-out">Login</a></li>
+                    <li class="ml-6"><a href="register.html" class="btn-primary inline-block py-2 px-5 rounded-md font-medium text-white bg-primary hover:bg-primary-dark transition-all duration-300 ease-in-out text-primary active">Register</a></li>
+                </ul>
+                <div class="hamburger hidden cursor-pointer text-xl text-text">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="auth-section py-16 bg-white">
+        <div class="container mx-auto px-5 max-w-6xl flex justify-center items-center">
+            <div class="auth-container bg-background rounded-lg shadow-md p-8 flex flex-col lg:flex-row overflow-hidden">
+                <div class="auth-form-container lg:w-1/2 pr-8">
+                    <h2 class="font-montserrat text-2xl mb-4 text-center lg:text-left">Create an Account</h2>
+                    <p class="text-text-light mb-6 text-center lg:text-left">Join SMART PARK today and make parking easier than ever!</p>
+
+                    <form id="registerForm" class="auth-form">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label for="firstName" class="block text-text-light text-sm font-bold mb-2">First Name</label>
+                                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required class="shadow appearance-none border rounded w-full py-2 px-3 text-text leading-tight focus:outline-none focus:shadow-outline">
+                                <span class="error-message text-error text-xs italic" id="firstNameError"></span>
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-text-light text-sm font-bold mb-2">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required class="shadow appearance-none border rounded w-full py-2 px-3 text-text leading-tight focus:outline-none focus:shadow-outline">
+                                <span class="error-message text-error text-xs italic" id="lastNameError"></span>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="email" class="block text-text-light text-sm font-bold mb-2">Email Address</label>
+                            <div class="relative">
+                                <i class="fas fa-envelope absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                                <input type="email" id="email" name="email" placeholder="Enter your email" required class="shadow appearance-none border rounded w-full py-2 pl-10 pr-3 text-text leading-tight focus:outline-none focus:shadow-outline">
+                            </div>
+                            <span class="error-message text-error text-xs italic" id="emailError"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="phone" class="block text-text-light text-sm font-bold mb-2">Phone Number</label>
+                            <div class="relative">
+                                <i class="fas fa-phone absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required class="shadow appearance-none border rounded w-full py-2 pl-10 pr-3 text-text leading-tight focus:outline-none focus:shadow-outline">
+                            </div>
+                            <span class="error-message text-error text-xs italic" id="phoneError"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="password" class="block text-text-light text-sm font-bold mb-2">Password</label>
+                            <div class="relative">
+                                <i class="fas fa-lock absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                                <input type="password" id="password" name="password" placeholder="Create a password" required class="shadow appearance-none border rounded w-full py-2 pl-10 pr-8 text-text leading-tight focus:outline-none focus:shadow-outline">
+                                <i class="fas fa-eye absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 cursor-pointer toggle-password"></i>
+                            </div>
+                            <span class="error-message text-error text-xs italic" id="passwordError"></span>
+                            <div class="password-strength mt-2">
+                                <div class="strength-bar bg-gray-300 rounded-full h-2">
+                                    <div class="bar-level rounded-full h-2" id="passwordStrength" style="width:0%"></div>
+                                </div>
+                                <span id="strengthText" class="text-xs text-gray-500">Password strength</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="confirmPassword" class="block text-text-light text-sm font-bold mb-2">Confirm Password</label>
+                            <div class="relative">
+                                <i class="fas fa-lock absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required class="shadow appearance-none border rounded w-full py-2 pl-10 pr-3 text-text leading-tight focus:outline-none focus:shadow-outline">
+                            </div>
+                            <span class="error-message text-error text-xs italic" id="confirmPasswordError"></span>
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="terms" class="flex items-center text-sm text-text-light">
+                                <input type="checkbox" id="terms" name="terms" required class="mr-2 leading-tight">
+                                <span>I agree to the <a href="#" class="text-primary hover:underline">Terms and Conditions</a> and <a href="#" class="text-primary hover:underline">Privacy Policy</a></span>
+                            </label>
+                            <span class="error-message text-error text-xs italic" id="termsError"></span>
+                        </div>
+
+                        <button type="submit" class="btn-primary btn-block w-full py-3 rounded-md font-medium text-white bg-primary hover:bg-primary-dark focus:outline-none focus:shadow-outline transition-all duration-300 ease-in-out">Create Account</button>
+                    </form>
+
+                    <div class="social-login mt-6 text-center">
+                        <p class="mb-4 text-text-light">Or register with</p>
+                        <div class="social-buttons flex justify-center gap-4">
+                            <button class="social-btn google bg-google-blue text-white py-2 px-4 rounded-md hover:bg-google-blue/90 focus:outline-none focus:shadow-outline flex items-center">
+                                <i class="fab fa-google mr-2"></i> Google
+                            </button>
+                            <button class="social-btn facebook bg-facebook-blue text-white py-2 px-4 rounded-md hover:bg-facebook-blue/90 focus:outline-none focus:shadow-outline flex items-center">
+                                <i class="fab fa-facebook-f mr-2"></i> Facebook
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="auth-footer mt-8 text-center">
+                        <p class="text-sm text-text-light">Already have an account? <a href="login.html" class="text-primary hover:underline">Login</a></p>
+                    </div>
+                </div>
+
+                <div class="auth-image lg:w-1/2 relative hidden lg:block">
+                    <div class="image-content absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-center">
+                        <i class="fas fa-parking fa-6x mb-4"></i>
+                        <h3 class="font-montserrat text-xl mb-2">Start SMART PARK Today</h3>
+                        <ul class="benefits list-none pl-0 mt-4">
+                            <li class="mb-2 flex items-center"><i class="fas fa-check mr-2"></i> Find parking spots in seconds</li>
+                            <li class="mb-2 flex items-center"><i class="fas fa-check mr-2"></i> Reserve spots in advance</li>
+                            <li class="mb-2 flex items-center"><i class="fas fa-check mr-2"></i> Pay securely online</li>
+                            <li class="flex items-center"><i class="fas fa-check mr-2"></i> Get directions to your spot</li>
+                        </ul>
+                    </div>
+                    <div class="absolute inset-0 bg-primary opacity-60"></div>
+                    <img src="https://via.placeholder.com/600x800/3498db/ffffff/?text=Smart+Parking" alt="Smart Parking" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-5 max-w-6xl">
+            <div class="footer-content grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div class="footer-logo">
+                    <div class="flex items-center">
+                        <svg class="parking-icon fill-primary" viewBox="0 0 24 24" width="24" height="24">
+                            <use href="assets/parking-icon.svg#parking"></use>
+                        </svg>
+                        <h3 class="font-montserrat mb-2 text-lg ml-2">SMART PARK</h3>
+                    </div>
+                    <p class="text-sm text-gray-400">Making parking easier for everyone.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 class="font-montserrat relative pb-2 mb-4 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-7.5 after:h-0.5 after:bg-primary">Quick Links</h4>
+                    <ul>
+                        <li class="mb-2"><a href="index.html" class="text-gray-300 hover:text-primary">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-gray-300 hover:text-primary">About</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-gray-300 hover:text-primary">Contact Us</a></li>
+                        <li class="mb-2"><a href="login.html" class="text-gray-300 hover:text-primary">Login</a></li>
+                        <li class="mb-2"><a href="register.html" class="text-gray-300 hover:text-primary">Register</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4 class="font-montserrat relative pb-2 mb-4 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-7.5 after:h-0.5 after:bg-primary">Connect With Us</h4>
+                    <div class="social-icons flex gap-3">
+                        <a href="#" class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/10 text-white hover:bg-primary hover:translate-y-[-3px] transition-all duration-300 ease-in-out"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/10 text-white hover:bg-primary hover:translate-y-[-3px] transition-all duration-300 ease-in-out"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/10 text-white hover:bg-primary hover:translate-y-[-3px] transition-all duration-300 ease-in-out"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/10 text-white hover:bg-primary hover:translate-y-[-3px] transition-all duration-300 ease-in-out"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom text-center border-t border-gray-700 pt-4">
+                <p class="text-sm text-gray-400">&copy; 2023 SMART PARK. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

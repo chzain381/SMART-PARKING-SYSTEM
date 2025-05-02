@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SMART PARK - Home</title>
+
+  <!-- Fonts and Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Custom Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3498db',
+            'primary-dark': '#2980b9',
+            secondary: '#2ecc71',
+            accent: '#f39c12',
+            'accent-dark': '#d6880e',
+            text: '#333',
+            'text-light': '#666',
+            background: '#f9f9f9',
+            white: '#fff',
+            border: '#ddd',
+            error: '#e74c3c',
+            success: '#2ecc71',
+          },
+          fontFamily: {
+            roboto: ['Roboto', 'sans-serif'],
+            montserrat: ['Montserrat', 'sans-serif'],
+          },
+          spacing: {
+            15: '3.75rem',
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Custom Styles -->
+  <style>
+    .nav-links.slide-in {
+      transform: translateY(0%);
+      opacity: 1;
+      visibility: visible;
+    }
+    .nav-links {
+      transform: translateY(-100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    }
+    @media (min-width: 768px) {
+      .nav-links {
+        transform: translateY(0%);
+        opacity: 1;
+        visibility: visible;
+        position: relative;
+        top: auto;
+        left: auto;
+        background-color: transparent;
+        box-shadow: none;
+        flex-direction: row !important;
+        width: auto;
+      }
+    }
+  </style>
+</head>
+
+<body class="font-roboto leading-6 text-text bg-background">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50 border-b-4 border-primary">
+    <div class="container mx-auto px-5 py-4 flex items-center justify-between max-w-6xl">
+      <div class="logo flex items-center">
+        <svg class="parking-icon fill-primary" viewBox="0 0 24 24" width="30" height="30">
+          <use href="assets/parking-icon.svg#parking"></use>
+        </svg>
+        <h1 class="text-xl font-montserrat mb-0 ml-2 text-primary">SMART PARK</h1>
+      </div>
+
+      <nav class="flex items-center">
+        <!-- Mobile & Desktop Nav Links -->
+        <ul id="mobileMenu" class="nav-links md:flex flex-col md:flex-row absolute md:relative top-full left-0 bg-white shadow-md md:shadow-none w-full md:w-auto z-50 transition-all duration-300 ease-in-out transform origin-top md:transform-none">
+          <li class="md:ml-6"><a href="index.html" class="block py-2 px-4 text-primary font-medium">Home</a></li>
+          <li class="md:ml-6"><a href="about.html" class="block py-2 px-4 text-text font-medium hover:text-primary">About</a></li>
+          <li class="md:ml-6"><a href="contact.html" class="block py-2 px-4 text-text font-medium hover:text-primary">Contact Us</a></li>
+          <li class="md:ml-6"><a href="login.html" class="block py-2 px-4 text-primary border-2 border-primary rounded-md hover:bg-primary hover:text-white transition-all duration-300">Login</a></li>
+          <li class="md:ml-6"><a href="register.html" class="block py-2 px-4 bg-primary text-white rounded-md hover:bg-primary-dark transition-all duration-300">Register</a></li>
+        </ul>
+
+        <!-- Hamburger Menu Button -->
+        <div class="hamburger md:hidden cursor-pointer text-xl text-text" id="hamburgerBtn">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero py-20 bg-gradient-to-br from-primary to-primary-dark text-white text-center relative overflow-hidden">
+    <div class="container mx-auto px-5 max-w-3xl">
+      <h1 class="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Find Your Perfect Parking Spot with SMART PARK</h1>
+      <p class="text-lg md:text-xl mb-10">Effortless parking solutions at your fingertips.</p>
+      <button class="inline-block py-3 px-8 rounded-full font-medium text-white bg-accent hover:bg-accent-dark transition-all duration-300">Get Started</button>
+    </div>
+    <div class="absolute bottom-0 left-0 w-full h-1/4 bg-white/10"></div>
+    <div class="absolute top-0 right-0 w-full h-1/4 bg-white/10"></div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features py-16 bg-white">
+    <div class="container mx-auto px-5 max-w-6xl">
+      <h2 class="text-3xl font-montserrat text-center mb-12 relative">Key Features</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="feature bg-background rounded-lg p-8 shadow-md text-center">
+          <i class="fas fa-search text-primary text-3xl mb-4"></i>
+          <h3 class="text-lg font-montserrat mb-2">Smart Search</h3>
+          <p class="text-sm text-text-light">Find available spots based on location, time, and price.</p>
+        </div>
+        <div class="feature bg-background rounded-lg p-8 shadow-md text-center">
+          <i class="fas fa-calendar-check text-primary text-3xl mb-4"></i>
+          <h3 class="text-lg font-montserrat mb-2">Advance Booking</h3>
+          <p class="text-sm text-text-light">Reserve parking in advance to guarantee availability.</p>
+        </div>
+        <div class="feature bg-background rounded-lg p-8 shadow-md text-center">
+          <i class="fas fa-mobile-alt text-primary text-3xl mb-4"></i>
+          <h3 class="text-lg font-montserrat mb-2">Mobile Payments</h3>
+          <p class="text-sm text-text-light">Pay securely through various mobile options.</p>
+        </div>
+        <div class="feature bg-background rounded-lg p-8 shadow-md text-center">
+          <i class="fas fa-map-marker-alt text-primary text-3xl mb-4"></i>
+          <h3 class="text-lg font-montserrat mb-2">Real-time Availability</h3>
+          <p class="text-sm text-text-light">See live spot availability on the map.</p>
+        </div>
+        <div class="feature bg-background rounded-lg p-8 shadow-md text-center">
+          <i class="fas fa-directions text-primary text-3xl mb-4"></i>
+          <h3 class="text-lg font-montserrat mb-2">Navigation</h3>
+          <p class="text-sm text-text-light">Get directions to your reserved spot.</p>
+        </div>
+        <div class="feature bg-background rounded-lg p-8 shadow-md text-center">
+          <i class="fas fa-history text-primary text-3xl mb-4"></i>
+          <h3 class="text-lg font-montserrat mb-2">Parking History</h3>
+          <p class="text-sm text-text-light">View your past sessions and payments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="cta py-20 bg-primary text-white text-center">
+    <div class="container mx-auto px-5 max-w-3xl">
+      <h2 class="text-3xl md:text-4xl font-montserrat font-bold mb-6">Ready to Simplify Your Parking?</h2>
+      <p class="text-lg md:text-xl mb-10">Join SMART PARK today and enjoy stress-free parking.</p>
+      <a href="register.html" class="inline-block py-3 px-8 rounded-full font-medium text-primary bg-accent hover:bg-accent-dark transition-all duration-300">Sign Up Now</a>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-5 max-w-6xl">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div>
+          <div class="flex items-center">
+            <svg class="fill-primary" viewBox="0 0 24 24" width="24" height="24">
+              <use href="assets/parking-icon.svg#parking"></use>
+            </svg>
+            <h3 class="font-montserrat ml-2">SMART PARK</h3>
+          </div>
+          <p class="text-sm text-gray-400 mt-2">Making parking easier for everyone.</p>
+        </div>
+        <div>
+          <h4 class="font-montserrat mb-4">Quick Links</h4>
+          <ul>
+            <li><a href="index.html" class="text-gray-300 hover:text-primary">Home</a></li>
+            <li><a href="about.html" class="text-gray-300 hover:text-primary">About</a></li>
+            <li><a href="contact.html" class="text-gray-300 hover:text-primary">Contact</a></li>
+            <li><a href="login.html" class="text-gray-300 hover:text-primary">Login</a></li>
+            <li><a href="register.html" class="text-gray-300 hover:text-primary">Register</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-montserrat mb-4">Connect</h4>
+          <div class="flex gap-3">
+            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-primary"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-primary"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-primary"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-primary"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center border-t border-gray-700 pt-4">
+        <p class="text-sm text-gray-400">&copy; 2025 SMART PARK. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const hamburger = document.getElementById('hamburgerBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+
+      hamburger.addEventListener('click', function () {
+        mobileMenu.classList.toggle('slide-in');
+      });
+    });
+  </script>
+</body>
+</html>
+
